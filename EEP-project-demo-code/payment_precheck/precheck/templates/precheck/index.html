@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Precheck</title>
+    <link rel="stylesheet" href="{% static 'precheck/styles.css' %}">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Precheck for payment completion...</h2>
+        <div class="form-field">
+            <label for="sourceAccount">Source Account:</label>
+            <select id="sourceAccount">
+                <option value="xxx-xxx-xxx-001">xxx-xxx-xxx-001</option>
+                <option value="xxx-xxx-xxx-002">xxx-xxx-xxx-002</option>
+                <option value="xxx-xxx-xxx-003">xxx-xxx-xxx-003</option>
+            </select>
+        </div>
+        <div class="form-field">
+            <label for="destinationAccount">Destination Account:</label>
+            <select id="destinationAccount">
+                <option value="xxx-xxx-xxx-011">xxx-xxx-xxx-011</option>
+                <option value="xxx-xxx-xxx-012">xxx-xxx-xxx-012</option>
+                <option value="xxx-xxx-xxx-013">xxx-xxx-xxx-013</option>
+            </select>
+        </div>
+        <div class="form-field">
+            <label for="destinationCountry">Destination Country:</label>
+            <select id="destinationCountry">
+                <option value="UK">UK</option>
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+                <option value="Australia">Australia</option>
+                <option value="Germany">Germany</option>
+                <option value="France">France</option>
+                <option value="Italy">Italy</option>
+                <option value="China">China</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Japan">Japan</option>
+            </select>
+        </div>
+        <div class="form-field">
+            <label for="paymentCurrency">Payment Currency:</label>
+            <select id="paymentCurrency">
+                <option value="GBP">GBP</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="CAD">CAD</option>
+                <option value="JPY">JPY</option>
+                <option value="AUD">AUD</option>
+                <option value="CHF">CHF</option>
+            </select>
+        </div>
+        <div class="form-field">
+            <label for="approximatePayment">Approximate Payment:</label>
+            <input type="number" id="approximatePayment">
+        </div>
+        <button id="checkButton">Check</button>
+    </div>
+    <div id="response"></div>
+        <!-- Your existing HTML content -->
+        <script src="{% static 'precheck/script.js' %}"></script>
+</body>
+</html>
